@@ -1,6 +1,6 @@
 
 
-import os, shutil, fnmatch, re, glob, errno
+import os, shutil, fnmatch, re, glob, errno, sys
 #source = 'C:\Automation\Input'
 #destination = 'C:\Automation\Incorrect_input'
 files = os.listdir('C:\Automation\Input')
@@ -37,15 +37,30 @@ end = '</book-title>'
 print((data_contents.split(start))[1].split(end)[0])
 print((data_contents.split(start))[2].split(end)[0])
 
-files = []
-for i in os.listdir('C:\Automation\Input'):
-    if i.endswith('.fb2'):
-        files.append(open(i, encoding="utf8"))
 
-print(i)
-
+#files = []
+for file in os.listdir('C:\Automation\Input'):
+    if file.endswith('.fb2'):
+        with open(file, encoding="utf8") as op_file:
+            data=op_file.read()
+#print(data)
+words = data_contents.split(" ")
+count_words = len(words)
+print('Number of words ', count_words)
 #with open('Example.fb2','r', encoding="utf8") as f:
     #file_body = f.read()
     #wordcount = len(file_body,split())
 #print(wordcount)
 
+#path = 'C:\Automation\Input\*.fb2'
+#files = glob.glob(path)
+#print(files)
+#for name in files
+
+path = 'C:/Automation/Input/*.fb2'
+files = os.listdir('C:\Automation\Input')
+print (files)
+for file in os.listdir('C:\Automation\Input'):
+    with open(file,"r") as f:
+        for line in f.readlines():
+            print(line.split())
