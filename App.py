@@ -1,20 +1,21 @@
 
 
-import os, shutil, fnmatch, re, glob, errno, sys
-#source = 'C:\Automation\Input'
-#destination = 'C:\Automation\Incorrect_input'
-files = os.listdir('C:\Automation\Input')
+import os
+import shutil
+import fnmatch
+import glob #, re, errno, sys
+#os.chdir('c:\Automation\Input')
+
+print('move files with incorrect ')
+files = os.listdir('C:\\Automation\\Input')
 print(files)
 for new_file in files:
     if not fnmatch.fnmatch(new_file, '*.fb2'):
         shutil.move(new_file,'C:\Automation\Incorrect_input')
 
-
-#df = pandas.read(r'C:\Automation\Input\Example.fb2')
-#words_count = df.count().sum()
+print('open and read file')
 path = 'C:\Automation\Input\Example.fb2'
 file_name = ('Example.fb2')
-#data = open(file_name, encoding="utf8")
 data = open(path, encoding="utf8")
 data_contents = data.read()
 #print(data_contents)
@@ -25,25 +26,33 @@ data_contents = data.read()
 #print('Book name ' ,book_name)
 #print('Book name ' ,book_name_end)
 
-#def count_of_words(data_contents):
+print('words count')
 words = data_contents.split(" ")
 count_words = len(words)
-#return count_words
-
 print('Number of words ', count_words)
 
+print('book title')
 start = '<book-title>'
 end = '</book-title>'
 print((data_contents.split(start))[1].split(end)[0])
 print((data_contents.split(start))[2].split(end)[0])
 
+print('read all files in folder')
+file_names = os.listdir('C:\Automation\Input')
+print(file_names)
+print('C:\Automation\Input', file_names)
+pth = 'C:\Automation\Input\*.fb2'
+nms = glob.glob(pth)
+print(nms)
+for files_to_read in nms:
+    #if files_to_read.endswith('.fb2'):
+    if fnmatch.fnmatch(files_to_read, '*.fb2'):
+        op_file = open(files_to_read, encoding="utf8")
+        data_to_read = op_file.read()
+        print(data_to_read)
+print(files_to_read)
 
-#files = []
-for file in os.listdir('C:\Automation\Input'):
-    if file.endswith('.fb2'):
-        with open(file, encoding="utf8") as op_file:
-            data=op_file.read()
-#print(data)
+
 words = data_contents.split(" ")
 count_words = len(words)
 print('Number of words ', count_words)
@@ -59,7 +68,7 @@ print('Number of words ', count_words)
 
 path = 'C:/Automation/Input/*.fb2'
 files = os.listdir('C:\Automation\Input')
-print (files)
+print(files)
 for file in os.listdir('C:\Automation\Input'):
     with open(file,"r") as f:
         for line in f.readlines():
