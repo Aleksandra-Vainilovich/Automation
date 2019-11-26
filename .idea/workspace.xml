@@ -4,6 +4,8 @@
     <list default="true" id="1b193858-07fc-4d29-80b1-2ba305e31d5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/Example2.fb2" beforeDir="false" afterPath="$PROJECT_DIR$/Input/Example2.fb2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/Example3.fb2" beforeDir="false" afterPath="$PROJECT_DIR$/Input/Example3.fb2" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +124,14 @@
       <option name="presentableId" value="Default" />
       <updated>1573485836751</updated>
     </task>
+    <task id="LOCAL-00001" summary="py">
+      <created>1574433798604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574433798604</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,10 +139,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="py" />
+    <option name="LAST_COMMIT_MESSAGE" value="py" />
   </component>
 </project>
