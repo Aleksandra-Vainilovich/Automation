@@ -53,7 +53,7 @@ for file_word_count in nms:
     data_to_read = op_file.read()
     words = data_to_read.split(" ")
     count_words = len(words)
-    print( count_words)
+    print(count_words)
 
 print('book title')
 for files_to_read_titles in nms:
@@ -82,29 +82,17 @@ for number_of_letters in nms:
         print(count_letters)
 
 
-print('capital letters')
+print('number of capital letters')
 for words_in_file in nms:
     if fnmatch.fnmatch(words_in_file, '*.fb2'):
         op_file = open(words_in_file, encoding="utf8")
         data_to_read = op_file.read()
         #words = data_to_read.split(" ")
         #print(data_to_read)
+        print('capital letters', sum(1 for cnt_upper in data_to_read if cnt_upper.isupper()))
+        #print('lower letters', sum(1 for cnt_lower in data_to_read if cnt_lower.islower()))
 
-#hash = {} #initialize an empty dictinonary
-count1 = 0
-count2 = 0
-for word in words_in_file.split(" "):
-    if word[0].islower():
-        count1 = count1+1
-    elif word[0].upper():
-        count2 = count2+1
-print(count1)
-print(count2)
 
-    #if word[0].isupper():
-        #if word in hash:
-            #hash[word] +=1
-print('word')
 
 
 
