@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b193858-07fc-4d29-80b1-2ba305e31d5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1b193858-07fc-4d29-80b1-2ba305e31d5c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Create_table">
+  <component name="RunManager" selected="Python.App">
     <configuration name="App" type="PythonConfigurationType" factoryName="Python">
       <module name="Automation" />
       <option name="INTERPRETER_OPTIONS" value="" />
