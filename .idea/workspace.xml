@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1b193858-07fc-4d29-80b1-2ba305e31d5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/Automation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Automation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -9,6 +10,9 @@
       <change beforePath="$PROJECT_DIR$/Automation.db" beforeDir="false" afterPath="$PROJECT_DIR$/Automation.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Create_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Create_table.py" afterDir="false" />
     </list>
+=======
+    <list default="true" id="1b193858-07fc-4d29-80b1-2ba305e31d5c" name="Default Changelist" comment="" />
+>>>>>>> 3d7c01959842b5aab9a6498dd769b398bf8fc083
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
