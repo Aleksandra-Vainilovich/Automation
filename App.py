@@ -53,6 +53,15 @@ for file_word_count in nms:
     data_to_read = op_file.read()
     words = data_to_read.split(" ")
     count_words = len(words)
+    start = '<book-title>'
+    end = '</book-title>'
+    print((data_to_read.split(start))[1].split(end)[0], ': count of words', count_words)
+
+for file_word_count_real in nms:
+    op_file = open(file_word_count_real, encoding="utf8")
+    data_to_read = op_file.read()
+    words = data_to_read.split(" ")
+    count_words = len(words)
     print(count_words)
 
 print('book title')
@@ -65,9 +74,19 @@ for files_to_read_titles in nms:
         print((data_to_read.split(start))[1].split(end)[0])
 
 print('number_of_paragraph')
-for files_to_read_titles in nms:
-    if fnmatch.fnmatch(files_to_read_titles, '*.fb2'):
-        op_file = open(files_to_read_titles, encoding="utf8")
+for number_of_paragraph in nms:
+    if fnmatch.fnmatch(number_of_paragraph, '*.fb2'):
+        op_file = open(number_of_paragraph, encoding="utf8")
+        data_to_read = op_file.read()
+        paragraphs = data_to_read.split("</p>")
+        count_paragraphs = len(paragraphs)
+        start = '<book-title>'
+        end = '</book-title>'
+        print((data_to_read.split(start))[1].split(end)[0], ': count of paragraphs',count_paragraphs)
+
+for number_of_paragraph_real in nms:
+    if fnmatch.fnmatch(number_of_paragraph_real, '*.fb2'):
+        op_file = open(number_of_paragraph_real, encoding="utf8")
         data_to_read = op_file.read()
         paragraphs = data_to_read.split("</p>")
         count_paragraphs = len(paragraphs)
@@ -79,43 +98,103 @@ for number_of_letters in nms:
         op_file = open(number_of_letters, encoding="utf8")
         data_to_read = op_file.read()
         count_letters = len(data_to_read)
+        start = '<book-title>'
+        end = '</book-title>'
+        print((data_to_read.split(start))[1].split(end)[0], ': count of letters', count_letters)
+
+for number_of_letters_real in nms:
+    if fnmatch.fnmatch(number_of_letters_real, '*.fb2'):
+        op_file = open(number_of_letters_real, encoding="utf8")
+        data_to_read = op_file.read()
+        count_letters = len(data_to_read)
         print(count_letters)
 
-
-print('number of capital letters')
+print('words with capital letters')
 for words_in_file in nms:
     if fnmatch.fnmatch(words_in_file, '*.fb2'):
         op_file = open(words_in_file, encoding="utf8")
         data_to_read = op_file.read()
+        words = data_to_read.split(" ")
+        start = '<book-title>'
+        end = '</book-title>'
+        #print(data_to_read)
+        print((data_to_read.split(start))[1].split(end)[0], ': words with capital letters', sum(1 for cnt_upper in words if cnt_upper.isupper()))
+        #print('lower letters', sum(1 for cnt_lower in data_to_read if cnt_lower.islower()))
+
+for words_with_capital_letters_real in nms:
+    if fnmatch.fnmatch(words_with_capital_letters_real, '*.fb2'):
+        op_file = open(words_with_capital_letters_real, encoding="utf8")
+        data_to_read = op_file.read()
+        words = data_to_read.split(" ")
+        print(sum(1 for cnt_upper in words if cnt_upper.isupper()))
+
+print('number of capital letters')
+for words_in_file_with_capital_letters in nms:
+    if fnmatch.fnmatch(words_in_file_with_capital_letters, '*.fb2'):
+        op_file = open(words_in_file_with_capital_letters, encoding="utf8")
+        data_to_read = op_file.read()
+        start = '<book-title>'
+        end = '</book-title>'
         #words = data_to_read.split(" ")
         #print(data_to_read)
-        print('capital letters', sum(1 for cnt_upper in data_to_read if cnt_upper.isupper()))
+        print((data_to_read.split(start))[1].split(end)[0], ': number of capital letters', sum(1 for cnt_upper in data_to_read if cnt_upper.isupper()))
         #print('lower letters', sum(1 for cnt_lower in data_to_read if cnt_lower.islower()))
 
 
+print('words in lower case')
+for words_in_lower_case in nms:
+    if fnmatch.fnmatch(words_in_lower_case, '*.fb2'):
+        op_file = open(words_in_lower_case, encoding="utf8")
+        data_to_read = op_file.read()
+        words = data_to_read.split(" ")
+        start = '<book-title>'
+        end = '</book-title>'
+        #print(data_to_read)
+        print((data_to_read.split(start))[1].split(end)[0], ': words in lower case', sum(1 for cnt_lower in words if cnt_lower.islower()))
+        #print('lower letters', sum(1 for cnt_lower in data_to_read if cnt_lower.islower()))
 
-
+for words_in_lower_case_real in nms:
+    if fnmatch.fnmatch(words_in_lower_case_real, '*.fb2'):
+        op_file = open(words_in_lower_case_real, encoding="utf8")
+        data_to_read = op_file.read()
+        words = data_to_read.split(" ")
+        print(sum(1 for cnt_lower in words if cnt_lower.islower()))
 
 print('insert into table')
 
 conn = sqlite3.connect('Automation.db')
-c = conn.cursor()
+c = conn.cursor() #Cursor creation
+#
+#def data_entry():
+#     book_name = files_to_read_titles
+#     number_of_paragraph = number_of_paragraph_real
+#     number_of_words = file_word_count_real
+#     number_of_letters = number_of_letters_real
+#     words_with_capital_letters = words_with_capital_letters_real
+#     words_in_lower_case = words_in_lower_case_real
+values_to_insert = [(files_to_read_titles,), (number_of_paragraph_real,), (file_word_count_real,), (number_of_letters_real,), (words_with_capital_letters_real,), (words_in_lower_case_real,),]
+c.execute("""INSERT INTO for_all_files
+                                    (
+                                    book_name
+                                    , number_of_paragraph
+                                    , number_of_words
+                                    , number_of_letters
+                                    , words_with_capital_letters
+                                    , words_in_lower_case
+                                    ) VALUES (?,?,?,?,?,?)""",
+                                    #(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+                                    [values_to_insert])
 
-def data_entry():
-    book_name = files_to_read_titles
-    number_of_words = file_word_count
-    c.execute("INSERT INTO for_all_files(book_name, number_of_paragraph, number_of_words, number_of_letters) VALUES (?,?,?,?)",
-              (book_name, files_to_read_titles, number_of_words, number_of_letters))
-    conn.commit()
+conn.commit()
 
-def read_from_db():
-    c.execute('SELECT * FROM for_all_files')
-    #data = c.fetchall()
-    #print(data)
-    for row in c.fetchall():
-        print(row)
+# def read_from_db():
+#     c.execute('SELECT * FROM for_all_files')
+#     #data = c.fetchall()
+#     #print(data)
+#     for row in c.fetchall():
+#         print(row)
 
 c.close()
-conn.close()
-
+conn.close() #Closing connection with the database
+#print(values_to_insert)
 
