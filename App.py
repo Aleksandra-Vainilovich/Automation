@@ -162,39 +162,40 @@ for words_in_lower_case_real in nms:
 
 print('insert into table')
 
-conn = sqlite3.connect('Automation.db')
-c = conn.cursor() #Cursor creation
+# conn = sqlite3.connect('Automation.db')
+# c = conn.cursor() #Cursor creation
+# #
+# #def data_entry():
+# #     book_name = files_to_read_titles
+# #     number_of_paragraph = number_of_paragraph_real
+# #     number_of_words = file_word_count_real
+# #     number_of_letters = number_of_letters_real
+# #     words_with_capital_letters = words_with_capital_letters_real
+# #     words_in_lower_case = words_in_lower_case_real
+# values_to_insert = [(files_to_read_titles,), (number_of_paragraph_real,), (file_word_count_real,), (number_of_letters_real,), (words_with_capital_letters_real,), (words_in_lower_case_real,),]
 #
-#def data_entry():
-#     book_name = files_to_read_titles
-#     number_of_paragraph = number_of_paragraph_real
-#     number_of_words = file_word_count_real
-#     number_of_letters = number_of_letters_real
-#     words_with_capital_letters = words_with_capital_letters_real
-#     words_in_lower_case = words_in_lower_case_real
-values_to_insert = [(files_to_read_titles,), (number_of_paragraph_real,), (file_word_count_real,), (number_of_letters_real,), (words_with_capital_letters_real,), (words_in_lower_case_real,),]
-c.execute("""INSERT INTO for_all_files
-                                    (
-                                    book_name
-                                    , number_of_paragraph
-                                    , number_of_words
-                                    , number_of_letters
-                                    , words_with_capital_letters
-                                    , words_in_lower_case
-                                    ) VALUES (?,?,?,?,?,?)""",
-                                    #(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
-                                    [values_to_insert])
-
-conn.commit()
-
-# def read_from_db():
-#     c.execute('SELECT * FROM for_all_files')
-#     #data = c.fetchall()
-#     #print(data)
-#     for row in c.fetchall():
-#         print(row)
-
-c.close()
-conn.close() #Closing connection with the database
-#print(values_to_insert)
+# c.execute("""INSERT INTO for_all_files
+#                                     (
+#                                     book_name
+#                                     , number_of_paragraph
+#                                     , number_of_words
+#                                     , number_of_letters
+#                                     , words_with_capital_letters
+#                                     , words_in_lower_case
+#                                     ) VALUES (?,?,?,?,?,?)""",
+#                                     #(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+#                                     [values_to_insert])
+#
+# conn.commit()
+#
+# # def read_from_db():
+# #     c.execute('SELECT * FROM for_all_files')
+# #     #data = c.fetchall()
+# #     #print(data)
+# #     for row in c.fetchall():
+# #         print(row)
+#
+# c.close()
+# conn.close() #Closing connection with the database
+# #print(values_to_insert)
 
