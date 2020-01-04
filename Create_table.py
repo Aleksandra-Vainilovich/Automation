@@ -1,33 +1,33 @@
 import sqlite3
-from App import files_to_read_titles
-from App import number_of_paragraph_real
-from App import file_word_count_real
-from App import number_of_letters_real
-from App import words_with_capital_letters_real
-from App import words_in_lower_case_real
+# from App import files_to_read_titles
+# from App import number_of_paragraph_real
+# from App import file_word_count_real
+# from App import number_of_letters_real
+# from App import words_with_capital_letters_real
+# from App import words_in_lower_case_real
 
 conn = sqlite3.connect('Automation.db')
 c = conn.cursor()
 
-# def create_table():
-#     c.execute('CREATE TABLE IF NOT EXISTS for_all_files '
-#               '( '
-#               'book_name TEXT'
-#               ', number_of_paragraph INTEGER'
-#               ', number_of_words INTEGER'
-#               ', number_of_letters INTEGER'
-#               ', words_with_capital_letters INTEGER'
-#               ', words_in_lower_case INTEGER'
-#               ')')
-#
-# def data_entry():
-#     c.execute("INSERT INTO for_all_files VALUES ('good', 56, 766, 65, 788, 5678)")
-#     conn.commit()
-#     c.close()
-#     conn.close()
-#
-# create_table()
-# data_entry()
+def create_table():
+    c.execute('CREATE TABLE IF NOT EXISTS for_all_files '
+              '( '
+              'book_name TEXT'
+              ', number_of_paragraph INTEGER'
+              ', number_of_words INTEGER'
+              ', number_of_letters INTEGER'
+              ', words_with_capital_letters INTEGER'
+              ', words_in_lower_case INTEGER'
+              ')')
+
+def data_entry():
+    c.execute("INSERT INTO for_all_files VALUES ('good', 56, 766, 65, 788, 5678)")
+    conn.commit()
+    c.close()
+    conn.close()
+
+create_table()
+data_entry()
 
 # def data_entry():
     # book_name = files_to_read_titles
@@ -51,17 +51,17 @@ c = conn.cursor()
 #                   )
 # conn.commit()
 
-def read_from_db():
-    c.execute('SELECT * FROM for_all_files')
-    #data = c.fetchall()
-    #print(data)
-    for row in c.fetchall():
-        print(row)
-read_from_db()
+# def read_from_db():
+#     c.execute('SELECT * FROM for_all_files')
+#     #data = c.fetchall()
+#     #print(data)
+#     for row in c.fetchall():
+#         print(row)
+# read_from_db()
 # def sel_table():
 #     c.execute('SELECT * FROM for_all_files')
 # sel_table()
 
-c.close()
-conn.close()
+# c.close()
+# conn.close()
 
