@@ -235,19 +235,27 @@ c = conn.cursor() #Cursor creation
 #     number_of_letters = number_of_letters_real
 #     words_with_capital_letters = words_with_capital_letters_real
 #     words_in_lower_case = words_in_lower_case_real
-values_to_insert = [(files_to_read_titles_text,), (number_of_paragraph_int,), (file_word_count_int,), (number_of_letters_int,), (words_with_capital_letters_int,), (words_in_lower_case_int,),]
+#values_to_insert = [(files_to_read_titles_text(),), (number_of_paragraph_int(),), (file_word_count_int(),), (number_of_letters_int(),), (words_with_capital_letters_int(),), (words_in_lower_case_int(),),]
+#values_to_insert = [files_to_read_titles_text(), number_of_paragraph_int(), file_word_count_int(), number_of_letters_int(), words_with_capital_letters_int(), words_in_lower_case_int()]
+values_to_insert = [[files_to_read_titles_text()], [number_of_paragraph_int()], [file_word_count_int()], [number_of_letters_int()], [words_with_capital_letters_int()], [words_in_lower_case_int()]]
+#values_to_insert = [print([files_to_read_titles_text()]), print([number_of_paragraph_int()]), print([file_word_count_int()]), print([number_of_letters_int()]), print([words_with_capital_letters_int()]), print([words_in_lower_case_int()])]
 
-c.execute("""INSERT INTO for_all_files
-                                    (
-                                    book_name
-                                    , number_of_paragraph
-                                    , number_of_words
-                                    , number_of_letters
-                                    , words_with_capital_letters
-                                    , words_in_lower_case
-                                    ) VALUES (?,?,?,?,?,?)""",
-                                    #(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
-                                    [values_to_insert])
+def table_insert():
+   c.execute("INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case) VALUES (?,?,?,?,?,?)", [values_to_insert])
+
+
+# def table_insert():
+#     c.execute("""INSERT INTO for_all_files VALUES
+#                                     (
+#                                     files_to_read_titles_text()
+#                                     , number_of_paragraph_int()
+#                                     , file_word_count_int()
+#                                     , number_of_letters_int()
+#                                     , words_with_capital_letters_int()
+#                                     , words_in_lower_case_int()
+#                                     )"""
+#               )
+table_insert()
 
 conn.commit()
 
