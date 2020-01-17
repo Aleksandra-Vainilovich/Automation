@@ -251,7 +251,8 @@ def values_list():
                   ,int(sum(1 for cnt_upper in words if cnt_upper.isupper()))
                   ,int(sum(1 for cnt_lower in words if cnt_lower.islower()))
                   )
-            print(a,sep=',')
+            print(a,',')
+
 values_list()
 print('ttttttttttttttttt')
 data_g = str(values_list())
@@ -285,7 +286,9 @@ print('insert into table')
 # #values_to_insert = [print([files_to_read_titles_text()]), print([number_of_paragraph_int()]), print([file_word_count_int()]), print([number_of_letters_int()]), print([words_with_capital_letters_int()]), print([words_in_lower_case_int()])]
 #
 # #values_to_insert = [print([values_list()])]
-# values_to_insert = print([values_list()])
+# #values_to_insert = print([values_list()])
+# values_to_insert = values_list()
+#
 # def table_insert():
 #    c.execute("INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case) VALUES (?,?,?,?,?,?)", [values_to_insert])
 #
@@ -315,7 +318,7 @@ print('insert into table')
 # c.close()
 # conn.close() #Closing connection with the database
 # #print(values_to_insert)
-
-
-
-
+#
+#
+#
+#
