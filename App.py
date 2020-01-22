@@ -90,9 +90,10 @@ def files_to_read_titles_text():
             data_to_read = op_file.read()
             start = '<book-title>'
             end = '</book-title>'
-            print((data_to_read.split(start))[1].split(end)[0])
+            print(str((data_to_read.split(start))[1].split(end)[0]))
 
 files_to_read_titles_text()
+print(type(files_to_read_titles_text()))
 
 print('number_of_paragraph')
 for number_of_paragraph in nms:
@@ -244,16 +245,24 @@ def values_list():
             count_letters = len(data_to_read)
             #words_with_capital_letters
             #words_in_lowercase
-            a=("'"+(data_to_read.split(start))[1].split(end)[0]+"'"
-                  ,int(count_paragraphs)
-                  ,int(count_words)
-                  ,int(count_letters)
-                  ,int(sum(1 for cnt_upper in words if cnt_upper.isupper()))
-                  ,int(sum(1 for cnt_lower in words if cnt_lower.islower()))
-                  )
-            print(a,',')
+            mytuple=((data_to_read.split(start))[1].split(end)[0]
+                     ,int(count_paragraphs)
+                     ,int(count_words)
+                     ,int(count_letters)
+                     ,int(sum(1 for cnt_upper in words if cnt_upper.isupper()))
+                     ,int(sum(1 for cnt_lower in words if cnt_lower.islower()))
+                     )
+            #print(mytuple,',')
+            print(mytuple[0:6])
+            #print(type(mytuple))
 
-values_list()
+#values_list()
+#b=values_list()
+#print(b)
+#print(values_list(),',')
+val = (values_list())
+print(type(val))
+#print(type(values_list()))
 print('ttttttttttttttttt')
 data_g = str(values_list())
 #print(data_g, sep=',')
@@ -270,8 +279,8 @@ print(g)
 
 print('insert into table')
 
-# conn = sqlite3.connect('Automation.db')
-# c = conn.cursor() #Cursor creation
+# conn = sqlite3.connect('Automation.db') #establishing a SQLite connection from Python
+# c = conn.cursor() #Cursor object creation
 # #
 # #def data_entry():
 # #     book_name = files_to_read_titles
@@ -287,10 +296,12 @@ print('insert into table')
 #
 # #values_to_insert = [print([values_list()])]
 # #values_to_insert = print([values_list()])
+# print('Values list')
 # values_to_insert = values_list()
+# print(values_list())
 #
 # def table_insert():
-#    c.execute("INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case) VALUES (?,?,?,?,?,?)", [values_to_insert])
+#     c.execute("INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case) VALUES (?,?,?,?,?,?)", [values_to_insert,])
 #
 #
 # # def table_insert():
@@ -306,8 +317,8 @@ print('insert into table')
 # #               )
 # table_insert()
 #
-# conn.commit()
-#
+# conn.commit() # make changes persistent in the database
+# c.rowcount # the number of rows affected.
 # # def read_from_db():
 # #     c.execute('SELECT * FROM for_all_files')
 # #     #data = c.fetchall()
@@ -317,8 +328,54 @@ print('insert into table')
 #
 # c.close()
 # conn.close() #Closing connection with the database
-# #print(values_to_insert)
+#  #print(values_to_insert)
 #
 #
 #
+### print('Another way to insert into table:')
 #
+### try:
+###     conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+# ##    c = conn.cursor() #Cursor object creation
+###     print('Successfully Connected to SQLite')
+#
+###     insert_query = """"INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+#                         VALUES print(values_list())"""
+#  ##   count = c.execute(insert_query)
+###     conn.commit()
+# ##    c.close()
+# ##    conn.close()
+### except sqlite3.Error as error:
+###     print("Failed to insert data into sqlite table", error)
+### finally:
+# ##    if (conn):
+# ##        conn.close()
+###         print("The SQLite connection is closed")
+
+print('Third insert way')
+def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case):
+    try:
+        conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+        c = conn.cursor()  # Cursor object creation
+        print('Successfully Connected to SQLite')
+
+        SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+                         VALUES (?,?,?,?,?,?)"""
+        data_tuple = (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+        c.execute(SQLite_insert_with_param, data_tuple)
+        conn.commit()
+        print("Python Variables inserted successfully into for_all_files table")
+        c.close()
+    except sqlite3.Error as error:
+        print("Failed to insert Python variable into sqlite table", error)
+    finally:
+        if (conn):
+            conn.close()
+            print("The SQLite connection is closed")
+
+#insertVariableIntoTable(values_list())
+#insertVariableIntoTable('fgfg',675,8976,6545,6767,9609) # this one works
+#insertVariableIntoTable(tuple(('Цветы для Элджернона', 2268, 69054, 500660, 961, 55280),('Цветы для Элджернона 777', 2268, 69054, 500660, 961, 55280), ('Цветы для Элджернона 45', 2268, 69054, 500660, 961, 55280)))
+
+#insertVariableIntoTable(values_list())
+insertVariableIntoTable(files_to_read_titles_text(),  words_with_capital_letters_int(), words_with_capital_letters_int(), words_with_capital_letters_int(), words_with_capital_letters_int(), words_with_capital_letters_int())
