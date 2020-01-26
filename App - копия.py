@@ -5,13 +5,10 @@ import shutil
 import fnmatch
 import glob
 import sqlite3
-import logging
 #, re, errno, sys
 #os.chdir('c:\Automation\Input')
 
 
-logging.basicConfig(filename = 'logging.log', format='%(asctime)s - %(message)s', level = logging.INFO, datefmt='%d-%b-%y %H:%M:%S')
-logging.info('This will get logged to a file')
 
 print('move files with incorrect ')
 files = os.listdir('C:\\Automation\\Input')
@@ -19,7 +16,6 @@ print(files)
 for new_file in files:
     if not fnmatch.fnmatch(new_file, '*.fb2'):
         shutil.move(new_file,'C:\Automation\Incorrect_input')
-logging.info('Files with wrong format are removed from the folder')
 
 print('open and read file')
 path = 'C:\Automation\Input\Example.fb2'
@@ -374,7 +370,6 @@ def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, num
         conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
         c = conn.cursor()  # Cursor object creation
         print('Successfully Connected to SQLite')
-        logging.info('Connected to SQLite to insert into for_all_files table')
 
         SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
                          VALUES (?,?,?,?,?,?)"""
@@ -382,23 +377,17 @@ def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, num
         c.execute(SQLite_insert_with_param, data_tuple)
         conn.commit()
         print("Python Variables inserted successfully into for_all_files table")
-        logging.info('Python Variables inserted successfully into for_all_files table')
         c.close()
-    except  Exception as error: #ValueError #sqlite3.Error
-        raise error
+    except sqlite3.Error as error:
         print("Failed to insert Python variable into sqlite table", error)
-        logging.error('Failed to insert Python variable into sqlite table', exc_info = True)
-        #logging.exception('Failed to insert Python variable into sqlite table')
     finally:
-        conn.close()
-        print("The SQLite connection is closed")
-        logging.info('The SQLite connection is closed')
+        if (conn):
+            conn.close()
+            print("The SQLite connection is closed")
 
 #insertVariableIntoTable(values_list())
 #insertVariableIntoTable('fgfg',675,8976,6545,6767,9609) # this one works
 #insertVariableIntoTable(tuple(('Цветы для Элджернона', 2268, 69054, 500660, 961, 55280),('Цветы для Элджернона 777', 2268, 69054, 500660, 961, 55280), ('Цветы для Элджернона 45', 2268, 69054, 500660, 961, 55280)))
 
 #insertVariableIntoTable(values_list())
-insertVariableIntoTable(text_title,  paragraph_count+text_title, count_words, count_letters, words_with_capital_letters, lower_case_words)
-
-print('wwwwww')
+insertVariableIntoTable(text_title,  paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
