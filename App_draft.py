@@ -21,13 +21,35 @@ for new_file in files:
         shutil.move(new_file,'C:\Automation\Incorrect_input')
 logging.info('Wrong format files are removed from the folder')
 
+# print('open and read file')
+# path = 'C:\Automation\Input\Example.fb2'
+# file_name = ('Example.fb2')
+# data = open(path, encoding="utf8")
+# data_contents = data.read()
+# #print(data_contents)
+#
+# print('words count')
+# words = data_contents.split(" ")
+# count_words = len(words)
+# print('Number of words ', count_words)
+#
+# print('book title')
+# start = '<book-title>'
+# end = '</book-title>'
+# print((data_contents.split(start))[1].split(end)[0])
+# print((data_contents.split(start))[2].split(end)[0])
+
 print('read all files in folder')
 file_names = os.listdir('C:\Automation\Input')
 print(file_names)
 pth = 'C:\Automation\Input\*.fb2'
 nms = glob.glob(pth)
 print(nms)
-
+# for files_to_read in nms:
+#     if fnmatch.fnmatch(files_to_read, '*.fb2'):
+#         op_file = open(files_to_read, encoding="utf8")
+#         data_to_read = op_file.read()
+#         #print(data_to_read)
 print('book title')
 for files_to_read_titles in nms:
     if fnmatch.fnmatch(files_to_read_titles, '*.fb2'):
@@ -39,7 +61,22 @@ for files_to_read_titles in nms:
         #text_title = ((data_to_read.split(start))[1].split(end)[0]) #class STRING
         #text_title = [((data_to_read.split(start))[1].split(end)[0])]  # class LIST
         text_title = (data_to_read.split(start))[1].split(end)[0]  #class STRING
+#print(text_title)
 print(type(text_title))
+
+# def files_to_read_titles_text():
+#     for files_to_read_titles in nms:
+#         if fnmatch.fnmatch(files_to_read_titles, '*.fb2'):
+#             op_file = open(files_to_read_titles, encoding="utf8")
+#             data_to_read = op_file.read()
+#             start = '<book-title>'
+#             end = '</book-title>'
+#             aa = (data_to_read.split(start))[1].split(end)[0]
+#             #print(str((data_to_read.split(start))[1].split(end)[0]))
+#             return [aa] #class LIST
+# files_to_read_titles_text()
+# print(files_to_read_titles_text())
+# print(type(files_to_read_titles_text()))
 
 print('all files words count')
 for file_word_count in nms:
@@ -50,7 +87,8 @@ for file_word_count in nms:
     start = '<book-title>'
     end = '</book-title>'
     print((data_to_read.split(start))[1].split(end)[0], ': count of words', count_words)
-print(count_words)
+    cnt_words = count_words
+print(cnt_words)
 # for file_word_count_real in nms:
 #     op_file = open(file_word_count_real, encoding="utf8")
 #     data_to_read = op_file.read()

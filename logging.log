@@ -61,3 +61,155 @@ INFO:root:The SQLite connection is closed
 26-Jan-20 14:01:18 - Files with wrong format are removed from the folder
 26-Jan-20 14:04:51 - This will get logged to a file
 26-Jan-20 14:04:51 - Files with wrong format are removed from the folder
+27-Jan-20 11:04:06 - This will get logged to a file
+27-Jan-20 11:04:06 - Files with wrong format are removed from the folder
+27-Jan-20 11:04:48 - This will get logged to a file
+27-Jan-20 11:04:48 - Files with wrong format are removed from the folder
+27-Jan-20 11:08:42 - This will get logged to a file
+27-Jan-20 11:08:42 - Files with wrong format are removed from the folder
+27-Jan-20 11:13:40 - This will get logged to a file
+27-Jan-20 11:13:40 - Files with wrong format are removed from the folder
+27-Jan-20 11:15:16 - This will get logged to a file
+27-Jan-20 11:15:16 - Files with wrong format are removed from the folder
+27-Jan-20 11:21:18 - This will get logged to a file
+27-Jan-20 11:21:18 - Files with wrong format are removed from the folder
+27-Jan-20 11:40:23 - This will get logged to a file
+27-Jan-20 11:40:23 - Files with wrong format are removed from the folder
+27-Jan-20 11:40:36 - This will get logged to a file
+27-Jan-20 11:40:36 - Files with wrong format are removed from the folder
+27-Jan-20 12:03:06 - This will get logged to a file
+27-Jan-20 12:03:06 - Files with wrong format are removed from the folder
+27-Jan-20 12:03:33 - This will get logged to a file
+27-Jan-20 12:03:33 - Files with wrong format are removed from the folder
+27-Jan-20 12:04:38 - This will get logged to a file
+27-Jan-20 12:04:38 - Files with wrong format are removed from the folder
+27-Jan-20 12:21:40 - This will get logged to a file
+27-Jan-20 12:21:40 - Files with wrong format are removed from the folder
+27-Jan-20 12:24:38 - This will get logged to a file
+27-Jan-20 12:24:38 - Files with wrong format are removed from the folder
+27-Jan-20 12:24:39 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 12:24:39 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 12:24:39 - The SQLite connection is closed
+27-Jan-20 12:24:55 - This will get logged to a file
+27-Jan-20 12:24:55 - Files with wrong format are removed from the folder
+27-Jan-20 12:24:56 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 12:24:56 - The SQLite connection is closed
+27-Jan-20 12:29:03 - This will get logged to a file
+27-Jan-20 12:29:03 - Files with wrong format are removed from the folder
+27-Jan-20 12:29:04 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 12:29:04 - The SQLite connection is closed
+27-Jan-20 12:29:45 - This will get logged to a file
+27-Jan-20 12:29:45 - Files with wrong format are removed from the folder
+27-Jan-20 12:29:45 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 12:29:45 - Incorrect number of bindings supplied. The current statement uses 6, and there are 5 supplied.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 382, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 6, and there are 5 supplied.
+27-Jan-20 12:29:45 - The SQLite connection is closed
+27-Jan-20 12:32:40 - This will get logged to a file
+27-Jan-20 12:32:40 - Files with wrong format are removed from the folder
+27-Jan-20 12:32:41 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 12:32:41 - The SQLite connection is closed
+27-Jan-20 13:04:27 - This will get logged to a file
+27-Jan-20 13:04:27 - Files with wrong format are removed from the folder
+27-Jan-20 13:04:28 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 13:04:28 - Incorrect number of bindings supplied. The current statement uses 6, and there are 5 supplied.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 382, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 6, and there are 5 supplied.
+27-Jan-20 13:04:28 - The SQLite connection is closed
+27-Jan-20 13:09:15 - This will get logged to a file
+27-Jan-20 13:09:15 - Files with wrong format are removed from the folder
+27-Jan-20 13:09:16 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 13:09:16 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 13:09:16 - The SQLite connection is closed
+27-Jan-20 13:09:48 - This will get logged to a file
+27-Jan-20 13:09:48 - Files with wrong format are removed from the folder
+27-Jan-20 14:05:46 - This will get logged to a file
+27-Jan-20 14:05:46 - Files with wrong format are removed from the folder
+27-Jan-20 14:05:47 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 14:05:47 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 14:05:47 - The SQLite connection is closed
+27-Jan-20 14:15:14 - This will get logged to a file
+27-Jan-20 14:15:14 - Files with wrong format are removed from the folder
+27-Jan-20 14:15:15 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 14:15:15 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 14:15:15 - The SQLite connection is closed
+27-Jan-20 14:15:30 - This will get logged to a file
+27-Jan-20 14:15:30 - Files with wrong format are removed from the folder
+27-Jan-20 14:15:31 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 14:15:31 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 14:15:31 - The SQLite connection is closed
+27-Jan-20 14:15:42 - This will get logged to a file
+27-Jan-20 14:15:42 - Files with wrong format are removed from the folder
+27-Jan-20 14:16:22 - This will get logged to a file
+27-Jan-20 14:16:22 - Files with wrong format are removed from the folder
+27-Jan-20 14:16:23 - unsupported operand type(s) for +: 'int' and 'str'
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 407, in Variable_insert
+    insertVariableIntoTable(text_title, paragraph_count+text_title, count_words, count_letters, words_with_capital_letters, lower_case_words)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+27-Jan-20 14:24:00 - This will get logged to a file
+27-Jan-20 14:24:00 - Files with wrong format are removed from the folder
+27-Jan-20 14:24:01 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 14:24:01 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 14:24:01 - The SQLite connection is closed
+27-Jan-20 14:24:01 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:05:34 - This will get logged to a file
+27-Jan-20 15:05:34 - Files with wrong format are removed from the folder
+27-Jan-20 15:06:20 - This will get logged to a file
+27-Jan-20 15:06:20 - Files with wrong format are removed from the folder
+27-Jan-20 15:20:45 - This will get logged to a file
+27-Jan-20 15:20:45 - Files with wrong format are removed from the folder
+27-Jan-20 15:20:45 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 15:20:50 - database is locked
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 361, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.OperationalError: database is locked
+27-Jan-20 15:20:50 - The SQLite connection is closed
+27-Jan-20 15:20:50 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:22:18 - This will get logged to a file
+27-Jan-20 15:22:18 - Files with wrong format are removed from the folder
+27-Jan-20 15:22:19 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 15:22:19 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:22:19 - The SQLite connection is closed
+27-Jan-20 15:22:19 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:22:50 - This will get logged to a file
+27-Jan-20 15:22:50 - Files with wrong format are removed from the folder
+27-Jan-20 15:22:51 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 15:22:51 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:22:51 - The SQLite connection is closed
+27-Jan-20 15:22:51 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:28:28 - Logging configuration for new run is created
+27-Jan-20 15:28:28 - Wrong format files are removed from the folder
+27-Jan-20 15:28:29 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 15:28:29 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:28:29 - The SQLite connection is closed
+27-Jan-20 15:28:29 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:30:08 - Logging configuration for new run is created
+27-Jan-20 15:30:08 - Wrong format files are removed from the folder
+27-Jan-20 15:30:09 - Connected to SQLite to insert into for_all_files table
+27-Jan-20 15:30:09 - Python Variables inserted successfully into for_all_files table
+27-Jan-20 15:30:09 - The SQLite connection is closed
+27-Jan-20 15:30:09 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:13:59 - Logging configuration for new run is created
+28-Jan-20 18:13:59 - Wrong format files are removed from the folder
+28-Jan-20 18:13:59 - Connected to SQLite to insert into for_all_files table
+28-Jan-20 18:13:59 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:13:59 - The SQLite connection is closed
+28-Jan-20 18:13:59 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:15:46 - Logging configuration for new run is created
+28-Jan-20 18:15:46 - Wrong format files are removed from the folder
+28-Jan-20 18:15:47 - Connected to SQLite to insert into for_all_files table
+28-Jan-20 18:15:47 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:15:47 - The SQLite connection is closed
+28-Jan-20 18:15:47 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:17:05 - Logging configuration for new run is created
+28-Jan-20 18:17:05 - Wrong format files are removed from the folder
+28-Jan-20 18:17:05 - Connected to SQLite to insert into for_all_files table
+28-Jan-20 18:17:05 - Python Variables inserted successfully into for_all_files table
+28-Jan-20 18:17:05 - The SQLite connection is closed
+28-Jan-20 18:17:05 - Python Variables inserted successfully into for_all_files table
