@@ -50,7 +50,10 @@ for file_word_count in nms:
     start = '<book-title>'
     end = '</book-title>'
     print((data_to_read.split(start))[1].split(end)[0], ': count of words', count_words)
+    print(count_words)
+    print(type(count_words))
 print(count_words)
+print(type(count_words))
 # for file_word_count_real in nms:
 #     op_file = open(file_word_count_real, encoding="utf8")
 #     data_to_read = op_file.read()
@@ -58,16 +61,22 @@ print(count_words)
 #     count_words = len(words)
 #     print(count_words)
 
-# def file_word_count_int():
-#     for file_word_count_real in nms:
-#         op_file = open(file_word_count_real, encoding="utf8")
-#         data_to_read = op_file.read()
-#         words = data_to_read.split(" ")
-#         count_words = len(words)
-#         print(count_words)
-#
-# file_word_count_int()
+print('ddddddddddddddd')
+def file_word_count_int():
+    for file_word_count_real in nms:
+        op_file = open(file_word_count_real, encoding="utf8")
+        data_to_read = op_file.read()
+        words = data_to_read.split(" ")
+        count_words = len(words)
+        print(type(count_words))
+        print(count_words)
+        #return len(words)
 
+file_word_count_int()
+print('fgfgfgfgfgfgfgfgfgfgfgfgf')
+fgfg = file_word_count_int()
+print(fgfg)
+print(type(fgfg))
 
 print('number_of_paragraph')
 for number_of_paragraph in nms:
@@ -80,7 +89,7 @@ for number_of_paragraph in nms:
         end = '</book-title>'
         a=((data_to_read.split(start))[1].split(end)[0], ': count of paragraphs',count_paragraphs)
         paragraph_count=count_paragraphs
-print(paragraph_count)
+print(count_paragraphs)
 # for number_of_paragraph_real in nms:
 #     if fnmatch.fnmatch(number_of_paragraph_real, '*.fb2'):
 #         op_file = open(number_of_paragraph_real, encoding="utf8")
@@ -89,6 +98,7 @@ print(paragraph_count)
 #         count_paragraphs = len(paragraphs)
 #         print(count_paragraphs)
 
+# print('gggggggggggggggggggggg')
 # def number_of_paragraph_int():
 #     for number_of_paragraph_real in nms:
 #         if fnmatch.fnmatch(number_of_paragraph_real, '*.fb2'):
@@ -346,6 +356,7 @@ def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, num
 def Variable_insert():
     try:
         insertVariableIntoTable(text_title, paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
+        #insertVariableIntoTable(print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg))
         logging.info('Python Variables inserted successfully into for_all_files table')
     except Exception as error:
         logging.exception(error)
