@@ -379,3 +379,99 @@ sqlite3.OperationalError: database is locked
 29-Jan-20 18:15:23 - Python Variables inserted successfully into for_all_files table
 29-Jan-20 18:15:23 - The SQLite connection is closed
 29-Jan-20 18:15:23 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 10:06:33 - Logging configuration for new run is created
+31-Jan-20 10:06:33 - Wrong format files are removed from the folder
+31-Jan-20 10:06:34 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:06:34 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 10:06:34 - The SQLite connection is closed
+31-Jan-20 10:06:34 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 10:15:12 - Logging configuration for new run is created
+31-Jan-20 10:15:12 - Wrong format files are removed from the folder
+31-Jan-20 10:15:13 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:15:13 - Error binding parameter 1 - probably unsupported type.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 401, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+31-Jan-20 10:15:13 - The SQLite connection is closed
+31-Jan-20 10:16:54 - Logging configuration for new run is created
+31-Jan-20 10:16:54 - Wrong format files are removed from the folder
+31-Jan-20 10:16:55 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:16:55 - Error binding parameter 1 - probably unsupported type.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 401, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+31-Jan-20 10:16:55 - The SQLite connection is closed
+31-Jan-20 10:19:54 - Logging configuration for new run is created
+31-Jan-20 10:19:54 - Wrong format files are removed from the folder
+31-Jan-20 10:19:55 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:19:55 - no such column: book_nm
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 400, in insertVariableIntoTable
+    c.execute("""INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+sqlite3.OperationalError: no such column: book_nm
+31-Jan-20 10:19:55 - The SQLite connection is closed
+31-Jan-20 10:24:18 - Logging configuration for new run is created
+31-Jan-20 10:24:18 - Wrong format files are removed from the folder
+31-Jan-20 10:24:19 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:24:19 - no such column: book_nm
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 400, in insertVariableIntoTable
+    c.execute(
+sqlite3.OperationalError: no such column: book_nm
+31-Jan-20 10:24:19 - The SQLite connection is closed
+31-Jan-20 10:27:37 - Logging configuration for new run is created
+31-Jan-20 10:27:37 - Wrong format files are removed from the folder
+31-Jan-20 10:27:37 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:27:37 - near "#VALUES": syntax error
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 404, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.OperationalError: near "#VALUES": syntax error
+31-Jan-20 10:27:37 - The SQLite connection is closed
+31-Jan-20 10:28:15 - Logging configuration for new run is created
+31-Jan-20 10:28:15 - Wrong format files are removed from the folder
+31-Jan-20 10:28:16 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:28:16 - Error binding parameter 1 - probably unsupported type.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 404, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+31-Jan-20 10:28:16 - The SQLite connection is closed
+31-Jan-20 10:29:17 - Logging configuration for new run is created
+31-Jan-20 10:29:17 - Wrong format files are removed from the folder
+31-Jan-20 10:29:18 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 10:29:18 - Error binding parameter 1 - probably unsupported type.
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 405, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
+31-Jan-20 10:29:18 - The SQLite connection is closed
+31-Jan-20 15:47:35 - Logging configuration for new run is created
+31-Jan-20 15:47:35 - Wrong format files are removed from the folder
+31-Jan-20 15:47:36 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 15:47:41 - database is locked
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 405, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.OperationalError: database is locked
+31-Jan-20 15:47:41 - The SQLite connection is closed
+31-Jan-20 15:48:36 - Logging configuration for new run is created
+31-Jan-20 15:48:36 - Wrong format files are removed from the folder
+31-Jan-20 15:48:37 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 15:48:42 - database is locked
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 405, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.OperationalError: database is locked
+31-Jan-20 15:48:42 - The SQLite connection is closed
+31-Jan-20 15:48:57 - Logging configuration for new run is created
+31-Jan-20 15:48:57 - Wrong format files are removed from the folder
+31-Jan-20 15:48:57 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 15:48:57 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 15:48:57 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 15:48:57 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 15:48:57 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 15:48:57 - Python Variables inserted successfully into for_all_files table
+31-Jan-20 15:48:57 - The SQLite connection is closed

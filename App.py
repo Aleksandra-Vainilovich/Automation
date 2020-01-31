@@ -319,22 +319,95 @@ print('insert into table')
 #  #print(values_to_insert)
 #
 
-print('Third insert way')
-def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case):
-    try:
-        conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
-        c = conn.cursor()  # Cursor object creation
-        print('Successfully Connected to SQLite')
-        logging.info('Connected to SQLite to insert into for_all_files table')
+# print('Third insert way works fine')
+# def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case):
+#     try:
+#         conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+#         c = conn.cursor()  # Cursor object creation
+#         print('Successfully Connected to SQLite')
+#         logging.info('Connected to SQLite to insert into for_all_files table')
+#
+#         SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+#                          VALUES (?,?,?,?,?,?)"""
+#         data_tuple = (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+#         c.execute(SQLite_insert_with_param, data_tuple)
+#         conn.commit()
+#         print("Python Variables inserted successfully into for_all_files table")
+#         logging.info('Python Variables inserted successfully into for_all_files table')
+#         c.close()
+#     except Exception as error: #ValueError #sqlite3.Error
+#         #raise error
+#         #print("Failed to insert Python variable into sqlite table", error)
+#         #logging.error('Failed to insert Python variable into sqlite table', exc_info = True)
+#         #logging.exception('Failed to insert Python variable into sqlite table')
+#         logging.exception(error)
+#         #logging.error('Error at %s', 'Failed to insert Python variable into sqlite table', exc_info=error)
+#         #logging.exception('Failed to insert Python variable into sqlite table', error)
+#     finally:
+#         conn.close()
+#         print("The SQLite connection is closed")
+#         logging.info('The SQLite connection is closed')
+#
+# #insertVariableIntoTable(values_list())
+# #insertVariableIntoTable('fgfg',675,8976,6545,6767,9609) # this one works
+# #insertVariableIntoTable(tuple(('Цветы для Элджернона', 2268, 69054, 500660, 961, 55280),('Цветы для Элджернона 777', 2268, 69054, 500660, 961, 55280), ('Цветы для Элджернона 45', 2268, 69054, 500660, 961, 55280)))
+#
+# #insertVariableIntoTable(values_list())
+# def Variable_insert():
+#     try:
+#         insertVariableIntoTable(text_title, paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
+#         #insertVariableIntoTable(print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg))
+#         logging.info('Python Variables inserted successfully into for_all_files table')
+#     except Exception as error:
+#         logging.exception(error)
+#
+# Variable_insert()
+# #
+# # #insertVariableIntoTable(text_title,  paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
+#
+# print('wwwwww')
 
-        SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
+print('FOURTH insert way')
+def insertVariableIntoTable():
+    try:
+        for values in nms:
+            if fnmatch.fnmatch(values, '*.fb2'):
+                op_file = open(values, encoding="utf8")
+                data_to_read = op_file.read()
+                #book_name
+                start = '<book-title>'
+                end = '</book-title>'
+                book_nm = (data_to_read.split(start))[1].split(end)[0]
+                #number_of_paragraph
+                paragraphs = data_to_read.split("</p>")
+                count_paragraphs = len(paragraphs)
+                #number_of_words
+                words = data_to_read.split(" ")
+                count_words = len(words)
+                #number_of_letters
+                count_letters = len(data_to_read)
+                #words_with_capital_letters
+                w_w_capital = sum(1 for cnt_upper in words if cnt_upper.isupper())
+                #words_in_lowercase
+                lower_cs = sum(1 for cnt_lower in words if cnt_lower.islower())
+                conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+                c = conn.cursor()  # Cursor object creation
+                print('Successfully Connected to SQLite')
+                logging.info('Connected to SQLite to insert into for_all_files table')
+
+                SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
                          VALUES (?,?,?,?,?,?)"""
-        data_tuple = (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
-        c.execute(SQLite_insert_with_param, data_tuple)
-        conn.commit()
-        print("Python Variables inserted successfully into for_all_files table")
-        logging.info('Python Variables inserted successfully into for_all_files table')
-        c.close()
+                #c.execute(
+                    #"INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)\n"
+                    #"                                         VALUES (book_nm, paragraphs, count_words, count_letters, w_w_capital, lower_cs)")
+                data_tuple = (book_nm, count_paragraphs, count_words, count_letters, w_w_capital, lower_cs)
+                print(data_tuple)
+                c.execute(SQLite_insert_with_param, data_tuple)
+
+                conn.commit()
+                print("Python Variables inserted successfully into for_all_files table")
+                logging.info('Python Variables inserted successfully into for_all_files table')
+                c.close()
     except Exception as error: #ValueError #sqlite3.Error
         #raise error
         #print("Failed to insert Python variable into sqlite table", error)
@@ -348,21 +421,6 @@ def insertVariableIntoTable(book_name, number_of_paragraph, number_of_words, num
         print("The SQLite connection is closed")
         logging.info('The SQLite connection is closed')
 
-#insertVariableIntoTable(values_list())
-#insertVariableIntoTable('fgfg',675,8976,6545,6767,9609) # this one works
-#insertVariableIntoTable(tuple(('Цветы для Элджернона', 2268, 69054, 500660, 961, 55280),('Цветы для Элджернона 777', 2268, 69054, 500660, 961, 55280), ('Цветы для Элджернона 45', 2268, 69054, 500660, 961, 55280)))
-
-#insertVariableIntoTable(values_list())
-def Variable_insert():
-    try:
-        insertVariableIntoTable(text_title, paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
-        #insertVariableIntoTable(print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg), print(fgfg))
-        logging.info('Python Variables inserted successfully into for_all_files table')
-    except Exception as error:
-        logging.exception(error)
-
-Variable_insert()
-#
-# #insertVariableIntoTable(text_title,  paragraph_count, count_words, count_letters, words_with_capital_letters, lower_case_words)
+insertVariableIntoTable()
 
 print('wwwwww')
