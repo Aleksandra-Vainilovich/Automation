@@ -475,3 +475,12 @@ sqlite3.OperationalError: database is locked
 31-Jan-20 15:48:57 - Connected to SQLite to insert into for_all_files table
 31-Jan-20 15:48:57 - Python Variables inserted successfully into for_all_files table
 31-Jan-20 15:48:57 - The SQLite connection is closed
+31-Jan-20 16:37:51 - Logging configuration for new run is created
+31-Jan-20 16:37:51 - Wrong format files are removed from the folder
+31-Jan-20 16:37:51 - Connected to SQLite to insert into for_all_files table
+31-Jan-20 16:37:51 - near "+": syntax error
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 406, in insertVariableIntoTable
+    c.execute(SQLite_insert_with_param, data_tuple)
+sqlite3.OperationalError: near "+": syntax error
+31-Jan-20 16:37:51 - The SQLite connection is closed

@@ -404,6 +404,14 @@ def insertVariableIntoTable():
                 print(data_tuple)
                 c.execute(SQLite_insert_with_param, data_tuple)
 
+                c.execute("""CREATE TABLE IF NOT EXISTS 'personal'+book_nm '
+                          '( '
+                          ', Word INTEGER'
+                          ', Count INTEGER'
+                          ', Count_Uppecase INTEGER'
+                          ')""")
+
+
                 conn.commit()
                 print("Python Variables inserted successfully into for_all_files table")
                 logging.info('Python Variables inserted successfully into for_all_files table')
