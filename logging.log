@@ -484,3 +484,45 @@ Traceback (most recent call last):
     c.execute(SQLite_insert_with_param, data_tuple)
 sqlite3.OperationalError: near "+": syntax error
 31-Jan-20 16:37:51 - The SQLite connection is closed
+05-Feb-20 09:02:29 - Logging configuration for new run is created
+05-Feb-20 09:02:29 - Wrong format files are removed from the folder
+05-Feb-20 09:02:30 - Successfully connected to SQLite
+05-Feb-20 09:02:30 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 09:02:30 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 09:02:30 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 09:05:56 - Logging configuration for new run is created
+05-Feb-20 09:05:56 - Wrong format files are removed from the folder
+05-Feb-20 09:05:57 - Successfully connected to SQLite
+05-Feb-20 09:05:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 09:05:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 09:05:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:09:41 - Logging configuration for new run is created
+05-Feb-20 14:09:41 - Wrong format files are removed from the folder
+05-Feb-20 14:09:41 - Successfully connected to SQLite
+05-Feb-20 14:09:41 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:09:41 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:09:41 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:11:58 - Logging configuration for new run is created
+05-Feb-20 14:11:58 - Wrong format files are removed from the folder
+05-Feb-20 14:11:59 - Successfully connected to SQLite
+05-Feb-20 14:11:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:11:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:11:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:11:59 - The SQLite connection is closed
+05-Feb-20 14:14:32 - Logging configuration for new run is created
+05-Feb-20 14:14:32 - Wrong format files are removed from the folder
+05-Feb-20 14:14:32 - Successfully connected to SQLite
+05-Feb-20 14:14:32 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:14:32 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:14:32 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:14:32 - The SQLite connection is closed
+05-Feb-20 14:15:18 - Logging configuration for new run is created
+05-Feb-20 14:15:18 - Wrong format files are removed from the folder
+05-Feb-20 14:15:18 - Successfully connected to SQLite
+05-Feb-20 14:15:18 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:15:19 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:15:19 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 14:15:19 - The SQLite multiple tables are created
+05-Feb-20 14:15:19 - The SQLite multiple tables are created
+05-Feb-20 14:15:19 - The SQLite multiple tables are created
+05-Feb-20 14:15:19 - The SQLite connection is closed

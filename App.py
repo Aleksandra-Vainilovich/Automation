@@ -6,9 +6,17 @@ import fnmatch
 import glob
 import sqlite3
 import logging
+import sqlalchemy
+from sqlalchemy import create_engine
+from sqlalchemy import MetaData
+from sqlalchemy import Table
+from sqlalchemy import inspect
+from sqlalchemy import Column, String, Integer
+from sqlalchemy.engine.url import URL
+
 #, re, errno, sys
 #os.chdir('c:\Automation\Input')
-
+# from Create_table import create_table
 
 logging.basicConfig(filename = 'logging.log', format='%(asctime)s - %(message)s', level = logging.INFO, datefmt='%d-%b-%y %H:%M:%S')
 logging.info('Logging configuration for new run is created')
@@ -367,6 +375,12 @@ print('insert into table')
 #
 # print('wwwwww')
 
+
+conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+c = conn.cursor()  # Cursor object creation
+print('Successfully Connected to SQLite')
+logging.info('Successfully connected to SQLite')
+
 print('FOURTH insert way')
 def insertVariableIntoTable():
     try:
@@ -390,10 +404,10 @@ def insertVariableIntoTable():
                 w_w_capital = sum(1 for cnt_upper in words if cnt_upper.isupper())
                 #words_in_lowercase
                 lower_cs = sum(1 for cnt_lower in words if cnt_lower.islower())
-                conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
-                c = conn.cursor()  # Cursor object creation
-                print('Successfully Connected to SQLite')
-                logging.info('Connected to SQLite to insert into for_all_files table')
+                # conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+                # c = conn.cursor()  # Cursor object creation
+                # print('Successfully Connected to SQLite')
+                # logging.info('Connected to SQLite to insert into for_all_files table')
 
                 SQLite_insert_with_param = """INSERT INTO for_all_files (book_name, number_of_paragraph, number_of_words, number_of_letters, words_with_capital_letters, words_in_lower_case)
                          VALUES (?,?,?,?,?,?)"""
@@ -403,19 +417,10 @@ def insertVariableIntoTable():
                 data_tuple = (book_nm, count_paragraphs, count_words, count_letters, w_w_capital, lower_cs)
                 print(data_tuple)
                 c.execute(SQLite_insert_with_param, data_tuple)
-
-                c.execute("""CREATE TABLE IF NOT EXISTS 'personal'+book_nm '
-                          '( '
-                          ', Word INTEGER'
-                          ', Count INTEGER'
-                          ', Count_Uppecase INTEGER'
-                          ')""")
-
-
                 conn.commit()
                 print("Python Variables inserted successfully into for_all_files table")
                 logging.info('Python Variables inserted successfully into for_all_files table')
-                c.close()
+                #c.close()
     except Exception as error: #ValueError #sqlite3.Error
         #raise error
         #print("Failed to insert Python variable into sqlite table", error)
@@ -424,11 +429,47 @@ def insertVariableIntoTable():
         logging.exception(error)
         #logging.error('Error at %s', 'Failed to insert Python variable into sqlite table', exc_info=error)
         #logging.exception('Failed to insert Python variable into sqlite table', error)
-    finally:
-        conn.close()
-        print("The SQLite connection is closed")
-        logging.info('The SQLite connection is closed')
+    # finally:
+    #     conn.close()
+    #     print("The SQLite connection is closed")
+    #     logging.info('The SQLite connection is closed')
 
 insertVariableIntoTable()
 
-print('wwwwww')
+print('Multiple tables creation')
+
+engine = create_engine('sqlite:///Automation.db')
+
+metadata = MetaData()
+metadata.reflect(bind=engine)
+
+def create_multiple_tables(table_name, metadata):
+    tables = metadata.tables.keys()
+    try:
+        if table_name not in tables:
+        # conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+        # c = conn.cursor()  # Cursor object creation
+            table = Table(table_name, metadata,
+                      Column('word', String),
+                      Column('count', Integer),
+                      Column('uppercase', Integer))
+            table.create(engine)
+            logging.info('The SQLite multiple tables are created')
+    except Exception as error:
+        logging.exception(error)
+        #c.execute(SQLite_insert_with_param, data_tuple)
+        #conn.commit()
+        #print("Python Variables inserted successfully into for_all_files table")
+        #logging.info('Python Variables inserted successfully into for_all_files table')
+        #c.close()
+
+tables = file_names
+for tbl in tables:
+    create_multiple_tables(tbl, metadata)
+
+inspector = inspect(engine)
+print(inspector.get_table_names())
+
+conn.close()
+print("The SQLite connection is closed")
+logging.info('The SQLite connection is closed')
