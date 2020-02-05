@@ -12,11 +12,13 @@ from sqlalchemy import MetaData
 from sqlalchemy import Table
 from sqlalchemy import inspect
 from sqlalchemy import Column, String, Integer
+from collections import Counter
 from sqlalchemy.engine.url import URL
 
 #, re, errno, sys
 #os.chdir('c:\Automation\Input')
 # from Create_table import create_table
+from sqlalchemy.util import counter
 
 logging.basicConfig(filename = 'logging.log', format='%(asctime)s - %(message)s', level = logging.INFO, datefmt='%d-%b-%y %H:%M:%S')
 logging.info('Logging configuration for new run is created')
@@ -47,6 +49,7 @@ for files_to_read_titles in nms:
         #text_title = ((data_to_read.split(start))[1].split(end)[0]) #class STRING
         #text_title = [((data_to_read.split(start))[1].split(end)[0])]  # class LIST
         text_title = (data_to_read.split(start))[1].split(end)[0]  #class STRING
+        print(text_title)
 print(type(text_title))
 
 print('all files words count')
@@ -473,3 +476,26 @@ print(inspector.get_table_names())
 conn.close()
 print("The SQLite connection is closed")
 logging.info('The SQLite connection is closed')
+
+print('wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
+
+print('words frequency count')
+def insertVariableIntoTable():
+    try:
+        for file_frequency_word_count in nms:
+            if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
+                op_file = open(file_frequency_word_count, encoding="utf8")
+                data_to_read = op_file.read()
+                words = data_to_read.split(" ")
+                print(words)
+                freqs = {}
+                for w_cnts in words:
+                    if w_cnts not in freqs:
+                        freqs[w_cnts] = 1
+                    else:
+                        freqs[w_cnts] += 1
+                        print(words,freqs[w_cnts])
+    except Exception as error:
+        logging.exception(error)
+
+insertVariableIntoTable()

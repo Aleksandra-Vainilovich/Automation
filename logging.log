@@ -526,3 +526,205 @@ sqlite3.OperationalError: near "+": syntax error
 05-Feb-20 14:15:19 - The SQLite multiple tables are created
 05-Feb-20 14:15:19 - The SQLite multiple tables are created
 05-Feb-20 14:15:19 - The SQLite connection is closed
+05-Feb-20 17:58:09 - Logging configuration for new run is created
+05-Feb-20 17:58:09 - Wrong format files are removed from the folder
+05-Feb-20 17:58:09 - Successfully connected to SQLite
+05-Feb-20 17:58:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:58:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:58:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:58:09 - The SQLite connection is closed
+05-Feb-20 17:59:07 - Logging configuration for new run is created
+05-Feb-20 17:59:07 - Wrong format files are removed from the folder
+05-Feb-20 17:59:08 - Successfully connected to SQLite
+05-Feb-20 17:59:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:08 - The SQLite connection is closed
+05-Feb-20 17:59:39 - Logging configuration for new run is created
+05-Feb-20 17:59:39 - Wrong format files are removed from the folder
+05-Feb-20 17:59:39 - Successfully connected to SQLite
+05-Feb-20 17:59:39 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:39 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:39 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:39 - The SQLite connection is closed
+05-Feb-20 17:59:57 - Logging configuration for new run is created
+05-Feb-20 17:59:57 - Wrong format files are removed from the folder
+05-Feb-20 17:59:58 - Successfully connected to SQLite
+05-Feb-20 17:59:58 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:58 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:58 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 17:59:58 - The SQLite connection is closed
+05-Feb-20 18:02:25 - Logging configuration for new run is created
+05-Feb-20 18:02:25 - Wrong format files are removed from the folder
+05-Feb-20 18:02:25 - Successfully connected to SQLite
+05-Feb-20 18:02:25 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:25 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:25 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:25 - The SQLite connection is closed
+05-Feb-20 18:02:46 - Logging configuration for new run is created
+05-Feb-20 18:02:46 - Wrong format files are removed from the folder
+05-Feb-20 18:02:47 - Successfully connected to SQLite
+05-Feb-20 18:02:47 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:47 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:47 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:02:47 - The SQLite connection is closed
+05-Feb-20 18:04:49 - Logging configuration for new run is created
+05-Feb-20 18:04:49 - Wrong format files are removed from the folder
+05-Feb-20 18:04:49 - Successfully connected to SQLite
+05-Feb-20 18:04:49 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:04:49 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:04:49 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:04:49 - The SQLite connection is closed
+05-Feb-20 18:20:54 - Logging configuration for new run is created
+05-Feb-20 18:20:54 - Wrong format files are removed from the folder
+05-Feb-20 18:20:55 - Successfully connected to SQLite
+05-Feb-20 18:20:55 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:20:55 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:20:55 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:20:55 - The SQLite connection is closed
+05-Feb-20 18:21:25 - Logging configuration for new run is created
+05-Feb-20 18:21:25 - Wrong format files are removed from the folder
+05-Feb-20 18:21:26 - Successfully connected to SQLite
+05-Feb-20 18:21:26 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:26 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:26 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:26 - The SQLite connection is closed
+05-Feb-20 18:21:43 - Logging configuration for new run is created
+05-Feb-20 18:21:43 - Wrong format files are removed from the folder
+05-Feb-20 18:21:43 - Successfully connected to SQLite
+05-Feb-20 18:21:43 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:43 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:43 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:21:43 - The SQLite connection is closed
+05-Feb-20 18:22:24 - Logging configuration for new run is created
+05-Feb-20 18:22:24 - Wrong format files are removed from the folder
+05-Feb-20 18:22:24 - Successfully connected to SQLite
+05-Feb-20 18:22:24 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:22:24 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:22:24 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:22:24 - The SQLite connection is closed
+05-Feb-20 18:24:59 - Logging configuration for new run is created
+05-Feb-20 18:24:59 - Wrong format files are removed from the folder
+05-Feb-20 18:24:59 - Successfully connected to SQLite
+05-Feb-20 18:24:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:24:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:24:59 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:24:59 - The SQLite connection is closed
+05-Feb-20 18:25:53 - Logging configuration for new run is created
+05-Feb-20 18:25:53 - Wrong format files are removed from the folder
+05-Feb-20 18:25:54 - Successfully connected to SQLite
+05-Feb-20 18:25:54 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:25:54 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:25:54 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:25:54 - The SQLite connection is closed
+05-Feb-20 18:34:07 - Logging configuration for new run is created
+05-Feb-20 18:34:07 - Wrong format files are removed from the folder
+05-Feb-20 18:34:07 - Successfully connected to SQLite
+05-Feb-20 18:34:07 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:07 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:07 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:07 - The SQLite connection is closed
+05-Feb-20 18:34:07 - name 'values' is not defined
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 498, in insertVariableIntoTable
+    if fnmatch.fnmatch(values, '*.fb2'):
+NameError: name 'values' is not defined
+05-Feb-20 18:34:15 - Logging configuration for new run is created
+05-Feb-20 18:34:15 - Wrong format files are removed from the folder
+05-Feb-20 18:34:16 - Successfully connected to SQLite
+05-Feb-20 18:34:16 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:16 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:16 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:16 - The SQLite connection is closed
+05-Feb-20 18:34:16 - name 'values' is not defined
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 498, in insertVariableIntoTable
+    if fnmatch.fnmatch(values, '*.fb2'):
+NameError: name 'values' is not defined
+05-Feb-20 18:34:33 - Logging configuration for new run is created
+05-Feb-20 18:34:33 - Wrong format files are removed from the folder
+05-Feb-20 18:34:33 - Successfully connected to SQLite
+05-Feb-20 18:34:33 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:34 - The SQLite connection is closed
+05-Feb-20 18:34:34 - name 'values' is not defined
+Traceback (most recent call last):
+  File "C:/Automation/App.py", line 498, in insertVariableIntoTable
+    if fnmatch.fnmatch(values, '*.fb2'):
+NameError: name 'values' is not defined
+05-Feb-20 18:34:52 - Logging configuration for new run is created
+05-Feb-20 18:34:52 - Wrong format files are removed from the folder
+05-Feb-20 18:34:52 - Successfully connected to SQLite
+05-Feb-20 18:34:52 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:52 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:52 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:34:52 - The SQLite connection is closed
+05-Feb-20 18:35:07 - Logging configuration for new run is created
+05-Feb-20 18:35:07 - Wrong format files are removed from the folder
+05-Feb-20 18:35:08 - Successfully connected to SQLite
+05-Feb-20 18:35:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:08 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:08 - The SQLite connection is closed
+05-Feb-20 18:35:57 - Logging configuration for new run is created
+05-Feb-20 18:35:57 - Wrong format files are removed from the folder
+05-Feb-20 18:35:57 - Successfully connected to SQLite
+05-Feb-20 18:35:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:57 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:35:57 - The SQLite connection is closed
+05-Feb-20 18:36:33 - Logging configuration for new run is created
+05-Feb-20 18:36:33 - Wrong format files are removed from the folder
+05-Feb-20 18:36:34 - Successfully connected to SQLite
+05-Feb-20 18:36:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:36:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:36:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:36:34 - The SQLite connection is closed
+05-Feb-20 18:40:09 - Logging configuration for new run is created
+05-Feb-20 18:40:09 - Wrong format files are removed from the folder
+05-Feb-20 18:40:09 - Successfully connected to SQLite
+05-Feb-20 18:40:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:40:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:40:09 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:40:09 - The SQLite connection is closed
+05-Feb-20 18:41:17 - Logging configuration for new run is created
+05-Feb-20 18:41:17 - Wrong format files are removed from the folder
+05-Feb-20 18:41:18 - Successfully connected to SQLite
+05-Feb-20 18:41:18 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:18 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:18 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:18 - The SQLite connection is closed
+05-Feb-20 18:41:34 - Logging configuration for new run is created
+05-Feb-20 18:41:34 - Wrong format files are removed from the folder
+05-Feb-20 18:41:34 - Successfully connected to SQLite
+05-Feb-20 18:41:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:34 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:41:34 - The SQLite connection is closed
+05-Feb-20 18:45:55 - Logging configuration for new run is created
+05-Feb-20 18:45:55 - Wrong format files are removed from the folder
+05-Feb-20 18:45:55 - Successfully connected to SQLite
+05-Feb-20 18:45:55 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:45:55 - The SQLite connection is closed
+05-Feb-20 18:46:05 - Logging configuration for new run is created
+05-Feb-20 18:46:05 - Wrong format files are removed from the folder
+05-Feb-20 18:46:05 - Successfully connected to SQLite
+05-Feb-20 18:46:05 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:46:05 - The SQLite connection is closed
+05-Feb-20 18:46:24 - Logging configuration for new run is created
+05-Feb-20 18:46:24 - Wrong format files are removed from the folder
+05-Feb-20 18:46:24 - Successfully connected to SQLite
+05-Feb-20 18:46:24 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:46:24 - The SQLite connection is closed
+05-Feb-20 18:48:35 - Logging configuration for new run is created
+05-Feb-20 18:48:35 - Wrong format files are removed from the folder
+05-Feb-20 18:48:35 - Successfully connected to SQLite
+05-Feb-20 18:48:35 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:48:35 - The SQLite multiple tables are created
+05-Feb-20 18:48:35 - The SQLite connection is closed
+05-Feb-20 18:48:50 - Logging configuration for new run is created
+05-Feb-20 18:48:50 - Wrong format files are removed from the folder
+05-Feb-20 18:48:50 - Successfully connected to SQLite
+05-Feb-20 18:48:50 - Python Variables inserted successfully into for_all_files table
+05-Feb-20 18:48:50 - The SQLite connection is closed
