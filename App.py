@@ -473,29 +473,53 @@ for tbl in tables:
 inspector = inspect(engine)
 print(inspector.get_table_names())
 
-conn.close()
-print("The SQLite connection is closed")
-logging.info('The SQLite connection is closed')
-
-print('wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
+# print('words frequency count')
+# def insertVariableIntoTable():
+#     try:
+#         for file_frequency_word_count in nms:
+#             if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
+#                 op_file = open(file_frequency_word_count, encoding="utf8")
+#                 data_to_read = op_file.read()
+#                 words = data_to_read.split(" ")
+#                 print(words)
+#                 freqs = {}
+#                 for w_cnts in words:
+#                     if w_cnts not in freqs:
+#                         freqs[w_cnts] = 1
+#                     else:
+#                         freqs[w_cnts] += 1
+#                     print(words,freqs[w_cnts])
+#     except Exception as error:
+#         logging.exception(error)
+#
+# insertVariableIntoTable()
 
 print('words frequency count')
-def insertVariableIntoTable():
+def insertVariableIntoMULTIPLETable():
     try:
         for file_frequency_word_count in nms:
             if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
                 op_file = open(file_frequency_word_count, encoding="utf8")
+                files = os.listdir('C:\\Automation\\Input')
+                print(files)
                 data_to_read = op_file.read()
                 words = data_to_read.split(" ")
-                print(words)
-                freqs = {}
-                for w_cnts in words:
-                    if w_cnts not in freqs:
-                        freqs[w_cnts] = 1
-                    else:
-                        freqs[w_cnts] += 1
-                        print(words,freqs[w_cnts])
+                counts = Counter(words)
+                # print(counts)
+                for word in words:
+                    SQLite_insert_many = 'INSERT INTO ' + files + ' VALUES (?,?,?)'
+                    data_tuple = (word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
+                    print(data_tuple)
+                    c.execute(SQLite_insert_many, data_tuple)
+                    conn.commit()
+                    # print(word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
     except Exception as error:
         logging.exception(error)
 
-insertVariableIntoTable()
+insertVariableIntoMULTIPLETable()
+
+conn.close()
+print("The SQLite connection is closed")
+logging.info('The SQLite connection is closed')
+
+
