@@ -13,6 +13,7 @@ from sqlalchemy import Table
 from sqlalchemy import inspect
 from sqlalchemy import Column, String, Integer
 from collections import Counter
+from os.path import realpath
 from sqlalchemy.engine.url import URL
 
 #, re, errno, sys
@@ -29,7 +30,7 @@ print(files)
 for new_file in files:
     if not fnmatch.fnmatch(new_file, '*.fb2'):
         shutil.move(new_file,'C:\Automation\Incorrect_input')
-logging.info('Wrong format files are removed from the folder')
+        logging.info('Wrong format files are removed from the folder')
 
 print('read all files in folder')
 file_names = os.listdir('C:\Automation\Input')
@@ -65,6 +66,8 @@ for file_word_count in nms:
     print(type(count_words))
 print(count_words)
 print(type(count_words))
+
+print('IT IS NECESSARY TO "pip install flask_sqlalchemy" THROUGH CMD')
 # for file_word_count_real in nms:
 #     op_file = open(file_word_count_real, encoding="utf8")
 #     data_to_read = op_file.read()
@@ -379,10 +382,28 @@ print('insert into table')
 # print('wwwwww')
 
 
-conn = sqlite3.connect('Automation.db')  # establishing a SQLite connection from Python
+conn = sqlite3.connect('C:\Automation\Automation.db')  # establishing a SQLite connection from Python
 c = conn.cursor()  # Cursor object creation
 print('Successfully Connected to SQLite')
 logging.info('Successfully connected to SQLite')
+
+def create_table():
+    try:
+        c.execute('CREATE TABLE IF NOT EXISTS for_all_files '
+              '( '
+              'book_name TEXT'
+              ', number_of_paragraph INTEGER'
+              ', number_of_words INTEGER'
+              ', number_of_letters INTEGER'
+              ', words_with_capital_letters INTEGER'
+              ', words_in_lower_case INTEGER'
+              ')')
+        logging.info('Table for_all_files is created')
+    except Exception as error:
+        logging.exception(error)
+
+create_table()
+
 
 print('FOURTH insert way')
 def insertVariableIntoTable():
@@ -422,6 +443,7 @@ def insertVariableIntoTable():
                 c.execute(SQLite_insert_with_param, data_tuple)
                 conn.commit()
                 print("Python Variables inserted successfully into for_all_files table")
+                print(u"current directory: %s" % os.getcwd())
                 logging.info('Python Variables inserted successfully into for_all_files table')
                 #c.close()
     except Exception as error: #ValueError #sqlite3.Error
@@ -441,7 +463,7 @@ insertVariableIntoTable()
 
 print('Multiple tables creation')
 
-engine = create_engine('sqlite:///Automation.db')
+engine = create_engine('sqlite:///C:\Automation\Automation.db')
 
 metadata = MetaData()
 metadata.reflect(bind=engine)
@@ -457,16 +479,35 @@ def create_multiple_tables(table_name, metadata):
                       Column('count', Integer),
                       Column('uppercase', Integer))
             table.create(engine)
-            logging.info('The SQLite multiple tables are created')
+            logging.info('The SQLite multiple tables "' + table_name + '" are created')
+        for file_frequency_word_count in nms:
+            if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
+                op_file = open(file_frequency_word_count, encoding="utf8")
+                # print('nms',nms)
+                # files = os.listdir('C:\\Automation\\Input')
+                # print('files',files)
+                data_to_read = op_file.read()
+                words = data_to_read.split(" ")
+                # counts = Counter(words)
+                # print(counts)
+                # print('words', words)
+
+                for word in words:
+                    SQLite_insert_many = 'INSERT INTO "' + table_name + '" VALUES (?,?,?)'
+                    data_tuple = (word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
+                    # print(data_tuple)
+                    c.execute(SQLite_insert_many, data_tuple)
+                    conn.commit()
+                    # print(word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
+                    # logging.info('Data is inserted into multiple tables')
     except Exception as error:
         logging.exception(error)
-        #c.execute(SQLite_insert_with_param, data_tuple)
-        #conn.commit()
-        #print("Python Variables inserted successfully into for_all_files table")
-        #logging.info('Python Variables inserted successfully into for_all_files table')
-        #c.close()
+        print('ERROR', error)
 
+print('hhhhhhhhhhhhh')
 tables = file_names
+print('tables', tables)
+
 for tbl in tables:
     create_multiple_tables(tbl, metadata)
 
@@ -493,30 +534,38 @@ print(inspector.get_table_names())
 #         logging.exception(error)
 #
 # insertVariableIntoTable()
+#
+#
+# print('words frequency count')
+# def insertVariableIntoMULTIPLETable(tables):
+#     try:
+#         for file_frequency_word_count in nms:
+#             if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
+#                 op_file = open(file_frequency_word_count, encoding="utf8")
+#                 print(nms)
+#                 data_to_read = op_file.read()
+#                 words = data_to_read.split(" ")
+#                 # counts = Counter(words)
+#                 # print(counts)
+#                 for word in words:
+#                     SQLite_insert_many = 'INSERT INTO "' + tables + '" VALUES (?,?,?)'
+#                     data_tuple = (word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
+#                     c.executemany(SQLite_insert_many, data_tuple)
+#                     conn.commit()
+#                     # print(data_tuple)
+#                     # print(word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
+#                 logging.info('Data is inserted into multiple tables')
+#     except Exception as error:
+#         logging.exception(error)
+#         print('ERROR', error)
+#
+# for key in tables:
+#     insertVariableIntoMULTIPLETable(key)
+#
+# print(key)
 
-print('words frequency count')
-def insertVariableIntoMULTIPLETable():
-    try:
-        for file_frequency_word_count in nms:
-            if fnmatch.fnmatch(file_frequency_word_count, '*.fb2'):
-                op_file = open(file_frequency_word_count, encoding="utf8")
-                files = os.listdir('C:\\Automation\\Input')
-                print(files)
-                data_to_read = op_file.read()
-                words = data_to_read.split(" ")
-                counts = Counter(words)
-                # print(counts)
-                for word in words:
-                    SQLite_insert_many = 'INSERT INTO ' + files + ' VALUES (?,?,?)'
-                    data_tuple = (word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
-                    print(data_tuple)
-                    c.execute(SQLite_insert_many, data_tuple)
-                    conn.commit()
-                    # print(word, words.count(word), sum(1 for cnt_upper in word if cnt_upper.isupper()))
-    except Exception as error:
-        logging.exception(error)
 
-insertVariableIntoMULTIPLETable()
+
 
 conn.close()
 print("The SQLite connection is closed")
