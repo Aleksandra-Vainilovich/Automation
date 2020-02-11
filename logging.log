@@ -6346,3 +6346,13 @@ sqlite3.OperationalError: no such table: Example_short.fb2
 08-Feb-20 19:37:26 - Table for_all_files is created
 08-Feb-20 19:37:26 - Python Variables inserted successfully into for_all_files table
 08-Feb-20 19:37:33 - The SQLite connection is closed
+11-Feb-20 10:01:09 - Logging configuration for new run is created
+11-Feb-20 10:01:09 - Successfully connected to SQLite
+11-Feb-20 10:01:09 - Table for_all_files is created
+11-Feb-20 10:01:09 - Python Variables inserted successfully into for_all_files table
+11-Feb-20 10:01:09 - The SQLite connection is closed
+11-Feb-20 10:10:18 - Logging configuration for new run is created
+11-Feb-20 10:10:18 - Successfully connected to SQLite
+11-Feb-20 10:10:18 - Table for_all_files is created
+11-Feb-20 10:10:18 - Python Variables inserted successfully into for_all_files table
+11-Feb-20 10:10:19 - The SQLite connection is closed
