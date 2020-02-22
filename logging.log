@@ -6356,3 +6356,230 @@ sqlite3.OperationalError: no such table: Example_short.fb2
 11-Feb-20 10:10:18 - Table for_all_files is created
 11-Feb-20 10:10:18 - Python Variables inserted successfully into for_all_files table
 11-Feb-20 10:10:19 - The SQLite connection is closed
+20-Feb-20 11:27:33 - Logging configuration for new run is created
+20-Feb-20 11:27:33 - Successfully connected to SQLite
+20-Feb-20 11:27:33 - Table for_all_files is created
+20-Feb-20 11:27:33 - Python Variables inserted successfully into for_all_files table
+20-Feb-20 11:27:39 - The SQLite connection is closed
+20-Feb-20 12:16:33 - Logging configuration for new run is created
+20-Feb-20 12:16:56 - Logging configuration for new run is created
+20-Feb-20 12:24:36 - Logging configuration for new run is created
+20-Feb-20 12:26:33 - Logging configuration for new run is created
+20-Feb-20 12:26:33 - Successfully connected to SQLite
+20-Feb-20 12:26:33 - Table for_all_files is created
+20-Feb-20 12:26:33 - Python Variables inserted successfully into for_all_files table
+20-Feb-20 12:26:42 - The SQLite connection is closed
+20-Feb-20 12:27:01 - Logging configuration for new run is created
+20-Feb-20 12:28:49 - Logging configuration for new run is created
+20-Feb-20 12:34:10 - Logging configuration for new run is created
+20-Feb-20 12:34:48 - Logging configuration for new run is created
+20-Feb-20 12:36:38 - Logging configuration for new run is created
+20-Feb-20 12:43:35 - Logging configuration for new run is created
+20-Feb-20 12:43:45 - Logging configuration for new run is created
+20-Feb-20 12:43:59 - Logging configuration for new run is created
+20-Feb-20 12:45:13 - Logging configuration for new run is created
+20-Feb-20 12:47:12 - Logging configuration for new run is created
+20-Feb-20 12:50:17 - Logging configuration for new run is created
+20-Feb-20 12:50:17 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+20-Feb-20 12:50:17 - Successfully connected to SQLite
+20-Feb-20 12:50:17 - Table for_all_files is created
+20-Feb-20 12:50:18 - Python Variables inserted successfully into for_all_files table
+20-Feb-20 12:50:24 - The SQLite multiple tables "sd.txt" are created
+20-Feb-20 12:50:32 - The SQLite connection is closed
+21-Feb-20 08:15:29 - Logging configuration for new run is created
+21-Feb-20 08:15:29 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:15:29 - Successfully connected to SQLite
+21-Feb-20 08:15:29 - Table for_all_files is created
+21-Feb-20 08:15:30 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:16:07 - The SQLite connection is closed
+21-Feb-20 08:31:43 - Logging configuration for new run is created
+21-Feb-20 08:31:43 - Wrong format files are removed from the folder
+21-Feb-20 08:36:55 - Logging configuration for new run is created
+21-Feb-20 08:40:42 - Logging configuration for new run is created
+21-Feb-20 08:40:42 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:40:42 - Successfully connected to SQLite
+21-Feb-20 08:40:42 - Table for_all_files is created
+21-Feb-20 08:40:42 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:41:05 - Logging configuration for new run is created
+21-Feb-20 08:41:05 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:41:05 - Successfully connected to SQLite
+21-Feb-20 08:41:05 - Table for_all_files is created
+21-Feb-20 08:41:05 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:41:20 - The SQLite connection is closed
+21-Feb-20 08:43:26 - Logging configuration for new run is created
+21-Feb-20 08:43:26 - [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом: 'logging.log'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+PermissionError: [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом: 'logging.log' -> 'C:\\Automation\\Incorrect_input\\logging.log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 795, in move
+    os.unlink(src)
+PermissionError: [WinError 32] Процесс не может получить доступ к файлу, так как этот файл занят другим процессом: 'logging.log'
+21-Feb-20 08:43:26 - Successfully connected to SQLite
+21-Feb-20 08:43:26 - Table for_all_files is created
+21-Feb-20 08:43:27 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:43:48 - The SQLite connection is closed
+21-Feb-20 08:44:27 - Logging configuration for new run is created
+21-Feb-20 08:44:27 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 24, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:44:27 - Successfully connected to SQLite
+21-Feb-20 08:44:27 - Table for_all_files is created
+21-Feb-20 08:44:27 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:44:41 - The SQLite connection is closed
+21-Feb-20 08:52:49 - Logging configuration for new run is created
+21-Feb-20 08:52:49 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 26, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:52:49 - Successfully connected to SQLite
+21-Feb-20 08:52:49 - Table for_all_files is created
+21-Feb-20 08:52:49 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:53:06 - The SQLite connection is closed
+21-Feb-20 08:53:23 - Logging configuration for new run is created
+21-Feb-20 08:53:23 - [Errno 2] No such file or directory: 'sd.txt'
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 780, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'sd.txt' -> 'C:\\Automation\\Incorrect_input\\sd.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Automation/App_to_Jenkins.py", line 27, in files_move
+    shutil.move(new_file,'C:\Automation\Incorrect_input')
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 794, in move
+    copy_function(src, real_dst)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 426, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python38-32\lib\shutil.py", line 259, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'sd.txt'
+21-Feb-20 08:53:23 - Successfully connected to SQLite
+21-Feb-20 08:53:23 - Table for_all_files is created
+21-Feb-20 08:53:23 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:53:36 - The SQLite connection is closed
+21-Feb-20 08:55:09 - Logging configuration for new run is created
+21-Feb-20 08:55:09 - Wrong format files are removed from the folder
+21-Feb-20 08:55:09 - Successfully connected to SQLite
+21-Feb-20 08:55:09 - Table for_all_files is created
+21-Feb-20 08:55:09 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:55:23 - The SQLite connection is closed
+21-Feb-20 08:55:38 - Logging configuration for new run is created
+21-Feb-20 08:55:38 - Wrong format files are removed from the folder
+21-Feb-20 08:55:38 - Wrong format files are removed from the folder
+21-Feb-20 08:55:38 - Wrong format files are removed from the folder
+21-Feb-20 08:55:38 - Successfully connected to SQLite
+21-Feb-20 08:55:38 - Table for_all_files is created
+21-Feb-20 08:55:39 - Python Variables inserted successfully into for_all_files table
+21-Feb-20 08:55:46 - The SQLite multiple tables "New Microsoft Excel Worksheet.xlsx" are created
+21-Feb-20 08:55:54 - The SQLite multiple tables "New Microsoft Word Document.docx" are created
+21-Feb-20 08:56:07 - The SQLite connection is closed
+22-Feb-20 15:07:41 - Logging configuration for new run is created
+22-Feb-20 15:07:41 - Successfully connected to SQLite
+22-Feb-20 15:07:41 - Table for_all_files is created
+22-Feb-20 15:07:42 - Python Variables inserted successfully into for_all_files table
+22-Feb-20 15:07:53 - The SQLite connection is closed

@@ -14,21 +14,32 @@ logging.basicConfig(filename = 'logging.log', format='%(asctime)s - %(message)s'
 logging.info('Logging configuration for new run is created')
 
 print('move files with incorrect format')
-files = os.listdir('C:\\Automation\\Input')
+files = os.listdir('E:\Instal\workspace\FB2\Input') #('C:\\Automation\\Input')
 print(files)
-for new_file in files:
-    if not fnmatch.fnmatch(new_file, '*.fb2'):
-        shutil.move(new_file,'C:\Automation\Incorrect_input')
-        logging.info('Wrong format files are removed from the folder')
+
+dir = os.getcwd()
+print('directory', dir)
+
+def files_move():
+    try:
+        os.chdir('E:\Instal\workspace\FB2\Input') #('C:\\Automation\\Input')
+        for new_file in files:
+            if not fnmatch.fnmatch(new_file, '*.fb2'):
+                shutil.move(new_file,'E:\Instal\workspace\FB2\Incorrect_input') #'C:\Automation\Incorrect_input')
+                logging.info('Wrong format files are removed from the folder')
+    except Exception as error:
+        logging.exception(error)
+        print('*******ERROR*******', error)
+files_move()
 
 print('read all files in folder')
-file_names = os.listdir('C:\Automation\Input')
-print(file_names)
-pth = 'C:\Automation\Input\*.fb2'
+# file_names = os.listdir('C:\Automation\Input')
+# print(file_names)
+pth = 'E:\Instal\workspace\FB2\Input\*.fb2' #'C:\Automation\Input\*.fb2'
 nms = glob.glob(pth)
 print(nms)
 
-conn = sqlite3.connect('C:\Automation\Automation.db')  # establishing a SQLite connection from Python
+conn = sqlite3.connect('E:\Instal\workspace\FB2\Automation.db') #('C:\Automation\Automation.db')  # establishing a SQLite connection from Python
 c = conn.cursor()  # Cursor object creation
 print('Successfully Connected to SQLite')
 logging.info('Successfully connected to SQLite')
@@ -91,7 +102,7 @@ def insertVariableIntoTable():
 insertVariableIntoTable()
 
 print('Multiple tables creation')
-engine = create_engine('sqlite:///C:\Automation\Automation.db')
+engine = create_engine('sqlite:///E:\Instal\workspace\FB2\Automation.db')#('sqlite:///C:\Automation\Automation.db')
 metadata = MetaData()
 metadata.reflect(bind=engine)
 
@@ -119,6 +130,7 @@ def create_multiple_tables(table_name, metadata):
         logging.exception(error)
         print('ERROR', error)
 
+file_names = os.listdir('E:\Instal\workspace\FB2\Input') #('C:\\Automation\\Input')
 tables = file_names
 
 for tbl in tables:
